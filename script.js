@@ -1,1 +1,2 @@
-generateSudoku();
+
+const sudoku = new Sudoku();
