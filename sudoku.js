@@ -1,5 +1,5 @@
-import { generateSudoku } from "./sudokuGenerator.js";
-import { BOX_SIZE, GRID_SIZE } from "./utilities";
+import { generateSudoku, findEmptyCell } from "./sudokuGenerator.js";
+import { BOX_SIZE, GRID_SIZE } from "./utilities.js";
 
 export class Sudoku {
     constructor() {
@@ -51,5 +51,9 @@ export class Sudoku {
             }
         }
         return duplicates;
+    }
+
+    hasEmptyCells() {
+        return Boolean(findEmptyCell(this.grid));
     }
 }

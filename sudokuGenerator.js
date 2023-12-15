@@ -27,7 +27,7 @@ function resolveSudoku(grid) {
     }
 }
 
-function findEmptyCell(grid) {
+export function findEmptyCell(grid) {
     for (let row = 0; row < GRID_SIZE; row++) {
         for (let column = 0; column < GRID_SIZE; column++) {
             if (grid[row][column] === null) return {row, column};
@@ -93,7 +93,7 @@ function removeCells(grid) {
             i++;
         }
     }
-    console.table(resultGrid)
+
     return resultGrid;
 
 }
